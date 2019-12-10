@@ -1,14 +1,20 @@
-Chapter 2 Examples
+Chapter 4 Examples
 ==================
-This folder contains example code for chapter 2 of Spring in Action, 4th Edition.
-The samples are split across multiple directories:
+一、注册中心
 
- * stereo-autoconfig  : Examples illustrating component-scanning and auto-wiring for section 2.2.
- * stereo-javaconfig  : Examples illustrating Java configuration for section 2.3.
- * stereo-xmlconfig   : Examples illustrating XML configuration for section 2.4.
- * stereo-mixedconfig : Examples illustrating mixed XML and Java configuration for section 2.5.
+本例使用Zookeeper作为注册中心，需事先安装好Zookeeper。
 
-Note that because the examples evolve throughout the chapter and the book's text sometimes
-shows multiple ways of accomplishing a goal, not all variations of the code in the book will
-be represented in these samples. You are invited to use this source code as a starting point
-and experiment using the variations presented in the text.
+二、接口工程
+
+dubbo-api工程里有一个接口IHello
+
+三、服务端
+
+dubbo-server工程添加Dubbo和接口工程的依赖，实现IHello接口，并用注解@Service暴露服务，在application.properties文件中配置Dubbo。
+
+四、消费方
+
+dubbo-client工程添加Dubbo和接口工程的依赖，编写远程调用Dubbo服务，@Reference注解可以用于生成远程服务代理，在application.properties文件中配置跟服务端一样的服务注册中心。
+
+五、网关
+模块之间互相调用时，为了降低由网络波动带来的不确定性
