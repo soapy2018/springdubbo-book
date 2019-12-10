@@ -1,4 +1,4 @@
-Chapter 2 Examples
+Chapter 4 Examples
 ==================
 This folder contains example code for chapter 2 of Spring in Action, 4th Edition.
 The samples are split across multiple directories:
