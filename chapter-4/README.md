@@ -17,4 +17,5 @@ dubbo-server工程添加Dubbo和接口工程的依赖，实现IHello接口，并
 dubbo-client工程添加Dubbo和接口工程的依赖，编写远程调用Dubbo服务，@Reference注解可以用于生成远程服务代理，在application.properties文件中配置跟服务端一样的服务注册中心。
 
 五、网关
+
 模块之间互相调用时，为了降低由网络波动带来的不确定性
